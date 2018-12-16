@@ -1,13 +1,13 @@
 import random
 import math
 
-def G(y, a):
-	if y < 0 and -math.log(-y) > a :
-		return -math.log(-y)
-	elif y > 0 and math.log(y) < -a:
-		return math.log(y)
+def G(y, a, c):
+	if -math.log(-y/c) > a :
+		return -math.log(-y/c)
+	elif math.log(y/c) < -a:
+		return math.log(y/c)
 	else:
-		return y
+		return y/c
 
 def expDist(y, a):
 	return -math.log(y)/a
