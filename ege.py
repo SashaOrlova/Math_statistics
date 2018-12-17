@@ -24,4 +24,17 @@ def ege():
 	else:
 		print("Не очень честное")
 
+def XiTheta(male, female, sumarry, theta):
+	return (male - theta*theta*sumarry)**2/(sumarry*theta*theta) + (female - theta*theta*sumarry)**2/(sumarry*theta*theta)
+
+def maleInFamily():
+	male = 527
+	female = 476
+	sumarry = 2020
+	if (XiTheta(male, female, sumarry, 0.5) < 3.84145):
+		print("+")
+	else:
+		print("-")
+
 ege()
+maleInFamily()
